@@ -1,0 +1,22 @@
+name: bRank
+main: net.kdehner.bRank.bRank
+version: 0.5
+commands:
+   regular:
+      description: Promotes a Guest player to Regular.
+      usage: /regular <code>
+      permission: bRank.guest
+      permission-message: You do not have permission.
+   brank:
+      description: Reloads the bRank config.
+      usage: /brank reload
+      permission: bRank.reload
+      permission-message: You do not have permission.
+      
+permissions:
+   bRank.guest:
+        description: Allows you to run command.
+   bRank.guest:
+        description: Allows you to reload config
+        default: op
+depend: [Vault]
