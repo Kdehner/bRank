@@ -43,16 +43,16 @@ public class bRank extends JavaPlugin {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
 			String code = getConfig().getString("code");
-			String dgroup = "default";
-			String rgroup = "regular";
+			String rank1 = getConfig().getString("rank1");
+			String rank2 = getConfig().getString("rank2");
 			
 		if(perms.has(player, "bRank.guest")){
 			
 			if((cmd.getName().equalsIgnoreCase("regular")) && (args.length == 1)){
 				
 				if(code.equalsIgnoreCase(args[0])) {
-					perms.playerRemoveGroup(player, dgroup);
-					perms.playerAddGroup(player, rgroup);
+					perms.playerRemoveGroup(player, rank1);
+					perms.playerAddGroup(player, rank2);
 					sender.sendMessage("You have been promoted to Regular");
 					return true;
 			}
